@@ -1,0 +1,76 @@
+<!--From product-form.liquid under add to cart button, sometimes it is in a different file depending on the theme-->
+<!--begin greenlist-->
+{% style %}
+h4 {font-family: 'AvenirNext-Regular', 'Open Sans', Arial, 'sans-serif'!important;}
+#greenlist .glclose:hover,
+#greenlist .glclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;}
+.gl:hover {opacity: .8;}
+@media only screen /* adding only query */ and (min-width: 754px) {
+#greenlist .glbutton-row {margin:0em auto 0em!important;}
+#greenlist .glhow-it-works-row, #greenlist .glbutton-row {width:100%;position: relative;clear:both;text-align:center;margin:4em auto;}
+#greenlist .glstep {width:19%!important;
+		display: inline-block;
+		vertical-align: middle;}
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+{% endstyle %}
+<div id="greenlist" style="display:block;color: #3D3F3F;margin-bottom:2em;line-height:2em;">
+  <div style="display:inline-block;vertical-align:top!important;">Sold out? Looking to save money? <a href="https://greenlist.typeform.com/to/Gt7LHNU5#utm_source=mlmbrand&amp;source=mlmbrand" target="_blank" style="color: #3D3F3F!important;"><u>Shop</u></a></div> 
+  <div style="display:inline-block"><a href="https://greenlist.typeform.com/to/Gt7LHNU5#utm_source=mlmbrand&amp;source=mlmbrand" target="_blank" aria-describedby="a11y-new-window-external-message" rel="null noopener"><img src="https://shopgreenlist.com/snippet-imagery/greenlist-logo-R.svg" style="height:37px;width: 133px;margin-left:6px;margin-top:-4px;vertical-align: text-bottom;"></a></div> 
+  <div style="display:inline-block;vertical-align: top;margin-top:-1px!important;"><a href="https://greenlist.typeform.com/to/Gt7LHNU5#utm_source=mlmbrand&amp;source=mlmbrand"  target="_blank" style="color: #3D3F3F!important;"><u>returns</u></a>. <span id="gl-tooltip-Btn" style="background-color:transparent!important;padding:0px;border-width: 0px;cursor: pointer;"><img src="https://shopgreenlist.com/snippet-imagery/tool-tip.svg" style="height: 17px; width: 17px;"></span></div>
+<!-- The Modal -->
+<div id="glModal" class="glmodal" style="display: none;position: fixed;z-index:200;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4);">
+<!-- Modal content -->
+  <div class="glmodal-content" style="font-family: 'AvenirNext-Regular', 'Open Sans', Arial, 'sans-serif'!important; background-color: #fefefe;margin: 15% auto;padding: 20px 20px 10px;border: 1px solid #888;max-width: 860px;width: 100%;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);-webkit-animation-name: animatetop;-webkit-animation-duration: 0.4s;animation-name: animatetop;animation-duration: 0.4s;font-size: 16px;text-align: center;line-height: 23px;">
+    <span class="glclose" style="color: #aaa;float: right;font-size: 28px;">x</span>
+    <img style="text-align: center;margin-top:1em;" src="https://shopgreenlist.com/demo-images/greenlist.svg">
+    <h4 style="font-weight: 300;font-size: 1.25em;margin-top: 0em;">Our returns (new with tags) skip the trip back<br/>to the warehouse and go directly to you.</h4>
+    <div class="glhow-it-works-row"style="width:100%;position: relative;clear:both;text-align:center;margin:3.5em auto;"><div style="padding-top:15px;">
+	    <div class="glstep"><div class="step-content"><img src="https://shopgreenlist.com/demo-images/signup.svg"><p style="margin-top: 5px;font-size:15px;">Sign up for<br/>greenlist returns</p></div></div>
+	    <div class="glstep"><div class="step-content" style="padding-top:20px;font-size:15px;"> <img src="https://shopgreenlist.com/demo-images/returns.svg"><p style="margin-top:0px;font-size:15px;">Someone returns<br/> item</p></div></div>
+	    <div class="glstep"><div class="step-content"><img src="https://shopgreenlist.com/demo-images/email.svg"><p style="font-size:15px;">Email confirmation</p></div></div>
+	    <div class="glstep"><div class="step-content" style="padding-top:20px;"><img src="https://shopgreenlist.com/demo-images/delivery.svg"><p style="margin-top: 10px;font-size:15px;">Item sent directly<br>to you</p></div></div>
+	    <div class="glstep"><div class="step-content" style="padding-top:0px;"><img src="https://shopgreenlist.com/demo-images/enjoy.svg"><p style="margin-top: -6px;font-size:15px;">Enjoy!</p></div></div></div>
+	</div>
+      <div class="glbutton-row" style="margin:3em auto 0em!important;width:100%;position: relative;clear:both;text-align:center;">
+    	<p><a style="cursor:pointer;" href="https://shopgreenlist.com/" target="_blank"><span class="gl" id="learn-more" style="background: #5DA99B;border-radius: 3px;padding:1em 2em;font-size: 16px;font-weight:bold;color: #FFFFFF;text-align: center;border:none;text-transform: uppercase;cursor: pointer!important;">Learn More</span></a></p>
+        <p>&nbsp;<br/><small>Credit card will only be charged when you confirm receipt of package. By signing up, you agree to our <a href="https://shopgreenlist.com/terms-of-service/" target="_blank" style="color: #3D3F3F!important;"><u>terms and conditions.</u></a></small></p>
+  	</div>
+   <script>
+     window.onload = function(){
+var glmodal = document.getElementById('glModal');
+// Get the button that opens the modal
+var glbtn = document.getElementById("gl-tooltip-Btn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("glclose")[0];
+// When the user clicks the button, open the modal 
+glbtn.onclick = function() {
+    glmodal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    glmodal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == glmodal) {
+        glmodal.style.display = "none";
+    }
+}}
+  </script>
+</div>
+</div>
+   
+</div>
+<!--end greenlist-->
